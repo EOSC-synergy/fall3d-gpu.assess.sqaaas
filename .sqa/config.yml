@@ -5,7 +5,7 @@ config:
       branch: release/1.7.13
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     gitlab.com/fall3d-suite/fall3d-gpu:
-      branch: master
+      branch: feature-badge
       repo: https://gitlab.com/fall3d-suite/fall3d-gpu
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,40 +15,44 @@ sqa_criteria:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu git:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-cream-hamster.sh
-        container: qc.acc_flimsy-buff-bongo
+        - /usr/bin/env sh .sqa/script.ready-seashell-badger.sh
+        container: qc.acc_cheeky-black-urchin
   QC.Doc:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-indigo-budgerigar.sh
-        container: qc.doc_beady-green-bordeaux
+        - /usr/bin/env sh .sqa/script.gloppy-silver-bonobo.sh
+        container: qc.doc_seedy-white-camel
       gitlab.com/fall3d-suite/fall3d-gpu git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-bronze-akbash.sh
-        container: qc.doc_lumpy-indigo-antelope
+        - /usr/bin/env sh .sqa/script.goopy-thistle-hyena.sh
+        container: qc.doc_hasty-gamboge-orangutan
+      gitlab.com/fall3d-suite/fall3d-gpu markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-zucchini-goose.sh
+        container: qc.doc_nerdy-purple-havanese
   QC.Lic:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-asparagus-caracal.sh
-        container: qc.lic_whiny-periwinkle-retriever
+        - /usr/bin/env sh .sqa/script.trippy-sangria-bird.sh
+        container: qc.lic_whiny-mustard-seal
   QC.Sec:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-celadon-monster.sh
-        container: qc.sec_pretty-blue-lionfish
+        - /usr/bin/env sh .sqa/script.skinny-teal-saola.sh
+        container: qc.sec_ugly-peach-chimpanzee
   QC.Sty:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-ochre-sheepdog.sh
-        container: qc.sty_hasty-wisteria-meerkat
+        - /usr/bin/env sh .sqa/script.chummy-tan-tang.sh
+        container: qc.sty_wiggy-orchid-booby
   QC.Ver:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-chartreuse-horse.sh
-        container: qc.ver_shaky-olivine-bloodhound
+        - /usr/bin/env sh .sqa/script.gummy-denim-tortoise.sh
+        container: qc.ver_foggy-mauve-setter
 timeout: 5400
