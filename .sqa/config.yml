@@ -5,7 +5,7 @@ config:
       branch: release/1.7.13
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     gitlab.com/fall3d-suite/fall3d-gpu:
-      branch: feature-badge
+      branch: master
       repo: https://gitlab.com/fall3d-suite/fall3d-gpu
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu git:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-maroon-bird.sh
-        container: qc.acc_sunny-burgundy-gerbil
+        - /usr/bin/env sh .sqa/script.flabby-corn-seahorse.sh
+        container: qc.acc_squirrely-chartreuse-mule
   QC.Doc:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-taupe-avocet.sh
-        container: qc.doc_chewy-azure-lionfish
+        - /usr/bin/env sh .sqa/script.sloppy-russet-bongo.sh
+        container: qc.doc_fuzzy-violet-fly
       gitlab.com/fall3d-suite/fall3d-gpu git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-gold-horse.sh
-        container: qc.doc_pasty-corn-lionfish
+        - /usr/bin/env sh .sqa/script.flaky-turquoise-pinscher.sh
+        container: qc.doc_gloppy-dandelion-kakapo
       gitlab.com/fall3d-suite/fall3d-gpu markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-olive-warthog.sh
-        container: qc.doc_squirrely-grey-cuscus
+        - /usr/bin/env sh .sqa/script.snazzy-sepia-robin.sh
+        container: qc.doc_stinky-cerise-axolotl
   QC.Lic:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-celadon-meerkat.sh
-        container: qc.lic_scummy-puce-tang
+        - /usr/bin/env sh .sqa/script.silly-copper-sparrow.sh
+        container: qc.lic_snazzy-persimmon-panda
   QC.Met:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-pink-swan.sh
-        container: qc.met_breezy-harlequin-barnacle
+        - /usr/bin/env sh .sqa/script.slaphappy-mustard-lemur.sh
+        container: qc.met_snazzy-buff-ragdoll
   QC.Sec:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-goldenrod-moose.sh
-        container: qc.sec_shabby-vermilion-oyster
+        - /usr/bin/env sh .sqa/script.pasty-orange-skunk.sh
+        container: qc.sec_seedy-rose-kudu
   QC.Sty:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-pumpkin-chow.sh
-        container: qc.sty_crappy-mustard-lobster
+        - /usr/bin/env sh .sqa/script.shaggy-charcoal-yak.sh
+        container: qc.sty_craggy-tomato-shrew
   QC.Ver:
     repos:
       gitlab.com/fall3d-suite/fall3d-gpu get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-amber-blue.sh
-        container: qc.ver_pokey-asparagus-wolf
+        - /usr/bin/env sh .sqa/script.droopy-violet-mammoth.sh
+        container: qc.ver_snazzy-taupe-dragon
 timeout: 5400
